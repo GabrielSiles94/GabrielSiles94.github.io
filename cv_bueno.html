@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Curriculum Gabriel</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css1.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	
+			
+	<script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous">
+	</script>
+   <script>
+	   
+	   $(document).ready(function() {
+ 	$("#contacto").hide();
+ 	$("#Acerca_mi").hide();
+ 	$("#formacion").hide();
+ 	$("#conocimientos").hide();
+
+ 	var informacion = document.querySelectorAll("li");
+ 	var x;
+ 	for (x = 0; x < informacion.length; x++) {
+ 		informacion[x].addEventListener("mouseover", chequeo, false);
+ 		informacion[x].addEventListener("mouseout", chequeo2, false);
+ 		informacion[x].addEventListener("click", inform, false);
+
+ 	}
+
+
+ });
+
+ function chequeo(e) {
+
+ 	if (e.target == info1) {
+ 		$("#info1").html("&#62:Acerca de mi");
+ 		$("#info1").addClass("li_dos");
+ 	} else if (e.target == info2) {
+ 		$("#info2").html("&#62:Contacto");
+ 	} else if (e.target == info3) {
+ 		$("#info3").html("&#62:Formación");
+
+ 	} else if (e.target == info4) {
+ 		$("#info4").html("&#62:Conocimientos informáticos");
+ 	}
+ }
+
+ function chequeo2(e) {
+
+ 	if (e.target == info1) {
+ 		$("#info1").text("Acerca de mi");
+ 	} else if (e.target == info2) {
+ 		$("#info2").text("Contacto");
+ 	} else if (e.target == info3) {
+ 		$("#info3").text("Formación");
+
+ 	} else if (e.target == info4) {
+ 		$("#info4").text("Conocimientos informáticos");
+ 	}
+ }
+
+
+ function inform(e) {
+ 	if (e.target == info1) {
+ 		$("#cv").html("Acerca de mi");
+ 		$("#conocimientos").hide();
+ 		$("#formacion").hide();
+ 		$("#contacto").hide();
+ 		$("#Acerca_mi").fadeIn(2000);
+ 	} else if (e.target == info2) {
+ 		$("#cv").html("Contacto");
+ 		$("#conocimientos").hide();
+ 		$("#formacion").hide();
+ 		$("#Acerca_mi").hide();
+ 		$("#contacto").fadeIn(2000);
+ 	} else if (e.target == info3) {
+ 		$("#cv").html("Formación");
+ 		$("#conocimientos").hide();
+ 		$("#contacto").hide();
+ 		$("#Acerca_mi").hide();
+ 		$("#formacion").fadeIn(2000);
+ 	} else if (e.target == info4) {
+ 		$("#cv").html("Habilidades");
+ 		$("#contacto").hide();
+ 		$("#Acerca_mi").hide();
+ 		$("#formacion").hide();
+ 		$("#conocimientos").fadeIn(2000);
+ 	}
+
+ };
+
+
+	
+		
+   </script>
+	
+	
+
+
+
+</head>
+
+	
+	<body class="bg-black text-monospace">
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-md-8  order-2 ">
+				<div class="informacion">
+					<h3 class="tex cv " id="cv">
+				Curriculum vitae
+			</h3>
+
+					<div class="contacto" id="contacto">
+						<p>Nombre: Juan Gabriel</p>
+						<p>Apellidos: Ponce Siles</p>
+						<p>Telefono: 643-77-89-97</p>
+						<p>Direccion: Plaza de Francisca Pacheco, portal 5</p>
+						<p>Email: GabrielSileslog@gmail.com</p>
+					</div>
+
+
+					<div class="Acerca_mi" id="Acerca_mi">
+
+						<p>Continuar creciendo en el mundo laboral es mi principal objetivo. En mi anterior trabajo me enseñaron que nunca se deja de aprender y que no hay recompensa sin esfuerzo. También me enseñaron el valor del trabajo en el equipo, ya que la coordinación es fundamental para que todo salga bien</p>
+
+						<p>En mis ratos libres me encanta aprender sobre lenguajes de programación porque, a pesar de que descubrí este mundo hace poco mas de un año mis ganas de adquirir conocimiento han ido aumentando.</p><br>
+						<br>
+						<ul>HOBBIES
+							<li>Lectura: Me encanta la novela policíaca y los libros de Stephen King</li>
+							<li>La vida rural</li>
+							<li>Videoconsolas y juegos</li>
+							<li>Disfrutar del ocio con amigos</li>
+							<li>Ver youtube y nutrirme de los conocimientos que los programadores nos ofrecen por esa plataforma: especial mención a Píldoras informáticas con el que tanto estoy aprendiendo y a "Soy Dalto"</li>
+						</ul>
+
+
+					</div>
+
+					<div class="formacion" id="formacion">
+						<p>Grado superior en Desarrollo de Aplicaciones WEB (Actualmente haciendo 2º: Me quedan sólo 2 asignaturas. Inglés e Iniciativa Emprendedora)</p><br>
+						<p>Certificado Profesional Desarrollo de Aplicaciones con tecnologías Web. Código:IFCD0210
+						</p><br>
+						<p>Certificado Profesional Gestion y Control del Aprovisionamiento. Codigo:COML0210</p><br>
+						<p>Bachillerato de humanidades y ciencias sociales.</p><br>
+						<p>Auxiliar de Industrias Alimentarias y manipulador de alimentos</p>
+
+					</div>
+
+					<div class="conocimientos" id="conocimientos">
+
+						<p><strong>-HTML</strong></p><br>
+						<p>-CSS</p><br>
+						<p> <strong>JAVASCRIPT:</strong> Conocimientos básicos de Javascript y de su librería <strong>JQUERY</strong> para seleccionar los objetos mediante sus clases y modificarlos a la vez de dotarlos de la interactividad que busco.
+						</p><br>
+
+						<p><strong>-SQL:</strong> Creación de modelo entidad-relación, modelo lógico y físico. Realización de consultas desde las mas simples hasta multitablas.
+						</p><br>
+
+						<ul><strong>-PHP:</strong>Conocimientos básicos de PHP junto a sus librerías <strong>PDO y MYSqli</strong>
+							<li>-Conexión a bases de datos</li>
+							<li> -Borrado de nuevos datos en tablas</li>
+							<li>-Registros de datos</li>
+							<li>-Construcción de búsquedas y realización de CRUM sencillos.</li>
+						</ul><br>
+
+						<p><strong>-XML</strong></p><br>
+						<p><strong>-LINUX COMMANDS</strong></p><br>
+						<p>-CREACIÓN DE MÁQUINAS VIRTUALES EN VIRTUAL BOX O VMWARE</p>
+
+
+
+
+
+
+					</div>
+				</div>
+
+
+			</div>
+			<div class="col-md-4 order-1">
+				<div class="contenido">
+					<h2 class="nombre text-center" id="nombre">Juan Gabriel Ponce Siles</h2>
+					<img alt="Bootstrap Image Preview" src="imagenes/fotocarnetcarnet.png" class="rounded-circle d-block mx-auto" id="imagen">
+					<div class="lista">
+						<ul>
+							<li class="list-item" id="info1">
+								Acerca de mi
+							</li>
+							<li class="list-item" id="info2">
+								Contacto
+							</li>
+							<li class="list-item" id="info3">
+								Formación
+							</li>
+							<li class="list-item" id="info4">
+								Conocimientos informáticos
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
